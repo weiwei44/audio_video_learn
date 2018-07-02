@@ -1,8 +1,11 @@
 package mobile.indoorbuy.com.audio_video_learn
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
+import mobile.indoorbuy.com.audio_video_learn.less1.ImageActivity
+import mobile.indoorbuy.com.audio_video_learn.less2.AudioActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -11,12 +14,16 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         sample_text.text = stringFromJNI()
+
+        learn1.setOnClickListener {
+            startActivity(Intent(this,ImageActivity::class.java))
+        }
+
+        learn2.setOnClickListener {
+            startActivity(Intent(this,AudioActivity::class.java))
+        }
     }
 
-    /**
-     * A native method that is implemented by the 'native-lib' native library,
-     * which is packaged with this application.
-     */
     external fun stringFromJNI(): String
 
     companion object {

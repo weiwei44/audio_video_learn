@@ -37,7 +37,15 @@ class AudioActivity : AppCompatActivity() {
         }
 
         btn_play.setOnClickListener {
-            AudioPlayHelper().play()
+            AudioPlayHelper().playPCM()
+        }
+
+        btn_wav.setOnClickListener {
+            recordHelper.convertWaveFile()
+        }
+
+        btn_wav_play.setOnClickListener {
+            AudioPlayHelper().playWav()
         }
     }
 

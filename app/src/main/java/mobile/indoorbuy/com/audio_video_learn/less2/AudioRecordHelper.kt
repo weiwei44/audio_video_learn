@@ -105,5 +105,10 @@ class AudioRecordHelper : Runnable {
         }
     }
 
+    public fun convertWaveFile(){
+        val wavHelper = WAVHelper(44100L,1,maxBufferSize,dirPath)
+        wavHelper.convertWaveFile()
+    }
+
 
 }

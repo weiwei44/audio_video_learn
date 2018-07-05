@@ -36,4 +36,24 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/learn1" />
 
+    <TextView
+        android:id="@+id/learn3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/less3"
+        android:layout_marginTop="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/learn2" />
+
+    <TextView
+        android:id="@+id/learn4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/less4"
+        android:layout_marginTop="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/learn3" />
+
 </android.support.constraint.ConstraintLayout>

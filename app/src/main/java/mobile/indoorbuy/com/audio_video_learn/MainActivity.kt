@@ -6,6 +6,8 @@ import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
 import mobile.indoorbuy.com.audio_video_learn.less1.ImageActivity
 import mobile.indoorbuy.com.audio_video_learn.less2.AudioActivity
+import mobile.indoorbuy.com.audio_video_learn.less3.SurfaceActivity
+import mobile.indoorbuy.com.audio_video_learn.less4.MediaActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,6 +23,14 @@ class MainActivity : AppCompatActivity() {
 
         learn2.setOnClickListener {
             startActivity(Intent(this,AudioActivity::class.java))
+        }
+
+        learn3.setOnClickListener {
+            startActivity(Intent(this,SurfaceActivity::class.java))
+        }
+
+        learn4.setOnClickListener {
+            startActivity(Intent(this,MediaActivity::class.java))
         }
     }
 

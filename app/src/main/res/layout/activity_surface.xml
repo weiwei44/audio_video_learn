@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="mobile.indoorbuy.com.audio_video_learn.MainActivity">
+
+    <mobile.indoorbuy.com.audio_video_learn.less3.CameraSurfaceView
+        android:id="@+id/surface"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <!--<mobile.indoorbuy.com.audio_video_learn.less3.CameraTextureView-->
+        <!--android:id="@+id/surface"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+    <!--</mobile.indoorbuy.com.audio_video_learn.less3.CameraTextureView>-->
+
+
+    <TextView
+        android:id="@+id/btn_take"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="拍照"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="20dp"/>
+</FrameLayout>

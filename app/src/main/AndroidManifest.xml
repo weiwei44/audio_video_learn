@@ -33,6 +33,8 @@
 
         <activity android:name=".less4.MediaActivity"/>
 
+        <activity android:name=".less7.AACCodecActivity"/>
+
     </application>
 
 </manifest>

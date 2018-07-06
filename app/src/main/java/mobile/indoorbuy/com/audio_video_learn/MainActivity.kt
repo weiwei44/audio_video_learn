@@ -8,6 +8,7 @@ import mobile.indoorbuy.com.audio_video_learn.less1.ImageActivity
 import mobile.indoorbuy.com.audio_video_learn.less2.AudioActivity
 import mobile.indoorbuy.com.audio_video_learn.less3.SurfaceActivity
 import mobile.indoorbuy.com.audio_video_learn.less4.MediaActivity
+import mobile.indoorbuy.com.audio_video_learn.less7.AACCodecActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -31,6 +32,10 @@ class MainActivity : AppCompatActivity() {
 
         learn4.setOnClickListener {
             startActivity(Intent(this,MediaActivity::class.java))
+        }
+
+        learn7.setOnClickListener {
+            startActivity(Intent(this,AACCodecActivity::class.java))
         }
     }
 

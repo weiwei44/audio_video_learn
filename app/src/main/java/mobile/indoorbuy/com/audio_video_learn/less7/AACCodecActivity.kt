@@ -18,6 +18,8 @@ class AACCodecActivity : AppCompatActivity() {
 
     private lateinit var recordHelper: AudioAACHelper
 
+    private lateinit var pcmPlay: AudioPCMHelper1
+
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     @RequiresApi(Build.VERSION_CODES.JELLY_BEAN)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,6 +27,8 @@ class AACCodecActivity : AppCompatActivity() {
         setContentView(R.layout.activity_aac_codec)
 
         recordHelper = AudioAACHelper()
+        pcmPlay = AudioPCMHelper1()
+
         requestPermission()
         recordHelper.checkMediaDecoder()
         btn_star.setOnClickListener {
@@ -33,6 +37,15 @@ class AACCodecActivity : AppCompatActivity() {
 
         btn_stop.setOnClickListener {
             recordHelper.stopRecord()
+        }
+
+        btn_play.setOnClickListener {
+            pcmPlay.startPlay()
+
+        }
+
+        btn_stop_play.setOnClickListener {
+            pcmPlay.stopPlay()
         }
     }
 

@@ -15,6 +15,7 @@ import android.media.MediaCodec
 
 /**
  * Created by BMW on 2018/7/2.
+ * 实时录音，保存aac
  */
 class AudioAACHelper : Runnable {
     private val dirPath = "${Environment.getExternalStorageDirectory().absolutePath}/weiwei"
@@ -166,7 +167,8 @@ class AudioAACHelper : Runnable {
             val mediaFormat = MediaFormat.createAudioFormat(mime,sampleSize,2)  //参数对应-> mime type、采样率、声道数
 
             mediaFormat.setString(MediaFormat.KEY_MIME,mime)
-            mediaFormat.setInteger(MediaFormat.KEY_AAC_PROFILE,MediaCodecInfo.CodecProfileLevel.AACObjectLC)
+            mediaFormat.setInteger(MediaFormat.KEY_AAC_PROFILE,
+                    MediaCodecInfo.CodecProfileLevel.AACObjectLC)  //低复杂度规格, MPEG-4 AAC LC
             mediaFormat.setInteger(MediaFormat.KEY_MAX_INPUT_SIZE,1024 * 1024)  //作用于inputBuffer的大小
             mediaFormat.setInteger(MediaFormat.KEY_BIT_RATE,bitRate)  //比特率
 
@@ -249,7 +251,7 @@ class AudioAACHelper : Runnable {
 
     /**
      * 给编码出的aac裸流添加adts头字段
-     *
+     *ADTS可以在任意帧解码，也就是说它每一帧都有头信息
      * @param packet    要空出前7个字节，否则会搞乱数据
      * @param packetLen
      */

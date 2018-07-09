@@ -11,6 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="开始录音"/>
+
     <Button
         android:id="@+id/btn_stop"
         android:layout_width="wrap_content"
@@ -19,5 +20,17 @@
         app:layout_constraintLeft_toRightOf="@+id/btn_star"/>
 
 
+    <Button
+        android:id="@+id/btn_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="播放录音"
+        app:layout_constraintLeft_toRightOf="@+id/btn_stop"/>
 
+    <Button
+        android:id="@+id/btn_stop_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="停止播放"
+        app:layout_constraintLeft_toRightOf="@+id/btn_play"/>
 </android.support.constraint.ConstraintLayout>
